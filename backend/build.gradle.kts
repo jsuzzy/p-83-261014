@@ -5,7 +5,7 @@ plugins {
     kotlin("jvm") version "2.3.21"
     kotlin("plugin.spring") version "2.3.21"
     kotlin("plugin.lombok") version "2.3.21"
-    kotlin("plugin.jpa") version "2.3.21" // jpa도 reflection, 상속 사용 -> 코틀린 방식으로
+    kotlin("plugin.jpa") version "2.3.21"
 }
 
 group = "com.back"
@@ -35,7 +35,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("tools.jackson.module:jackson-module-kotlin") // 코틀린용 잭슨 추가
+    implementation("tools.jackson.module:jackson-module-kotlin")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.h2database:h2")
@@ -56,9 +56,6 @@ kotlin {
     }
 }
 
-// open으로 열어라 -> 그 대상: Entity, MappedSuperclass, Embeddable
-// 상속을 사용하는 애들
-// 없어도 작동하긴 함 -> 공식에서 추가해놨으니 추가하는 게 맞다고 판단
 allOpen {
     annotation("jakarta.persistence.Entity")
     annotation("jakarta.persistence.MappedSuperclass")
