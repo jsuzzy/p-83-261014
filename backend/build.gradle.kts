@@ -48,6 +48,7 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testAnnotationProcessor("org.projectlombok:lombok")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.1.0")
+    testImplementation(kotlin("test"))
 }
 
 kotlin {
