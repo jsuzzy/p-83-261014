@@ -4,10 +4,10 @@ import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.User
 
 class SecurityUser (
+    val id: Int,
+    val nickname: String,
     username: String,
     password: String,
     authorities: Collection<GrantedAuthority>,
-    val id: Int,
-    val nickname: String,
 ) : User(username, password, authorities) {
 }
