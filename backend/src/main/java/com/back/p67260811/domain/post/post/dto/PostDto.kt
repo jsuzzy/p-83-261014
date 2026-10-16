@@ -17,9 +17,9 @@ data class PostDto private constructor(
         post.id,
         post.createDate,
         post.modifyDate,
-        post.getTitle(),
-        post.getContent(),
-        post.getAuthor().nickname,
-        post.getAuthor().username
+        post.title,
+        post.content,
+        post.author.nickname,
+        post.author.username
     )
 }
