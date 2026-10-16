@@ -12,7 +12,7 @@ data class PostCommentDto private constructor(
 ) {
     constructor(postComment: PostComment) : this(
         postComment.id,
-        postComment.getContent(),
+        postComment.content,
         postComment.createDate,
         postComment.modifyDate
     )

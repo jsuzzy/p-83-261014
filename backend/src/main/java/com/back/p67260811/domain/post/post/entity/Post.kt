@@ -36,7 +36,7 @@ class Post(
         comments.removeAll { it.id == id }
     }
 
-    fun modifyComment(id: Int, content: String?): PostComment =
+    fun modifyComment(id: Int, content: String): PostComment =
         findCommentById(id).apply {
             modify(content)
         }
